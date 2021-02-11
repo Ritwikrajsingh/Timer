@@ -15,21 +15,20 @@ def set_timer():
 
 def countdown():
 	t = set_timer()
-	if t>0:
+	if t > 0:
 		td = timedelta(seconds=t)
 		l1.config(text = td, background= "black")
-		t=t-1
+		t -= 1
 		l1.after(1000, countdown)
 	else:
 		print("end")
 		l1.config(text = "Time is up!")
 
-
 """User Interface"""
 
 #CANVAS
 root = Tk()
-root.title("Day Timer For Current Year")
+root.title("Timer")
 root.geometry("220x125")
 
 # LABELS
@@ -42,7 +41,7 @@ l2.grid(row = 2, column = 1)
 l3 = Label(root, font = "arial 10", text= "MM :")
 l3.grid(row = 4, column = 1)
 
-l4 = Label(root,font="arial 20", text='just for paddin',foreground="gainsboro")
+l4 = Label(root,font="arial 20", text='just for paddin',foreground="gray85")
 l4.grid(row = 7, column = 2, padx = 25, pady=3)
 
 #INPIT BOXES
