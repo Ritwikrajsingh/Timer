@@ -1,4 +1,4 @@
 # Timer
 learning "tkinter"/pyhton3.x
 
-![executed](timer.py)
+![executed](timer.png)
