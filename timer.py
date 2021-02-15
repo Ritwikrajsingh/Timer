@@ -4,10 +4,8 @@ from datetime import timedelta, datetime
 
 def set_timer():
 	today = datetime.today()
-	today_timestamp = int(today.timestamp())
 	estimation = datetime(year=today.year, month=int(e2.get()), day=int(e1.get()), hour=0, minute=0, second=0)
-	estimation_timestamp = int(estimation.timestamp())
-	t = estimation_timestamp - today_timestamp
+	t = int(estimation.timestamp()) - int(today.timestamp())
 	if t > 0:
 		return t
 	else:
